@@ -1,0 +1,23 @@
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+#header {
+  height: 45px;
+  background: yellow;
+}
+#content .sidebar {
+  width: 200px;
+  height: 500px;
+  float: left;
+  background: blue;
+}
+#content .main {
+  width: 740px;
+  height: 500px;
+  float: right;
+  background: green;
+}
+#footer {
+  height: 150px;
+}
