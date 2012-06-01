@@ -17,7 +17,6 @@ body {
   overflow: hidden;
 }
 .main-content {
-  float: right;
   background: green;
 }
 .sidebar {
@@ -25,6 +24,9 @@ body {
   height: 500px;
   float: left;
   background: blue;
+}
+.thumbs {
+  overflow: hidden;
 }
 .thumb {
   float: left;
@@ -44,10 +46,7 @@ and (max-width : 760px)
 
 }
 */
-@media only screen and (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
+@media only screen and (max-width: 960px) {
   #container {
     position: absolute;
     left: 10px;
@@ -56,6 +55,63 @@ and (max-width : 760px)
   .main-content {
     background: green;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #header {
+    background: red;
+  }
+  .sidebar {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main-content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 220px;
+  }
+  .thumb {
+    width: 33.3333%;
+    padding-bottom: 10px;
+  }
+  .thumb img {
+    display: block;
+    width: 97% !important;
+  }
+  .thumb:nth-child(3n-2) {
+    clear: both;
+  }
+  .thumb:nth-child(3n-1) img {
+    margin: 0 auto;
+  }
+  .thumb:nth-child(3n) img {
+    float: right;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .sidebar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 760px) {
+  .thumb {
+    width: 33.3333%;
+    padding-bottom: 10px;
+  }
+  .thumb img {
+    display: block;
+    width: 97% !important;
+  }
+  .thumb:nth-child(3n-2) {
+    clear: both;
+  }
+  .thumb:nth-child(3n-1) img {
+    margin: 0 auto;
+  }
+  .thumb:nth-child(3n) img {
+    float: right;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
