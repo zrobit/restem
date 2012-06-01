@@ -29,10 +29,13 @@ body {
   overflow: hidden;
 }
 .thumb {
+  padding-bottom: 10px;
   float: left;
 }
-.thumb:nth-child(4n) {
-  margin-right: 0;
+.thumb img {
+  display: block;
+  width: 97% !important;
+  margin: 0 auto;
 }
 #footer {
   height: 150px;
@@ -46,9 +49,26 @@ and (max-width : 760px)
 
 }
 */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   #header {
     background: black !important;
+  }
+  #container {
+    width: 1200px;
+  }
+  .thumb {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  #header {
+    background: black !important;
+  }
+  #container {
+    width: 960px;
+  }
+  .thumb {
+    width: 25%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -77,22 +97,10 @@ and (max-width : 760px)
     box-sizing: border-box;
     padding-left: 220px;
   }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) {
   .thumb {
     width: 33.3333%;
-    padding-bottom: 10px;
-  }
-  .thumb img {
-    display: block;
-    width: 97% !important;
-  }
-  .thumb:nth-child(3n-2) {
-    clear: both;
-  }
-  .thumb:nth-child(3n-1) img {
-    margin: 0 auto;
-  }
-  .thumb:nth-child(3n) img {
-    float: right;
   }
 }
 @media only screen and (max-width: 760px) {
@@ -103,44 +111,13 @@ and (max-width : 760px)
 @media only screen and (min-width: 480px) and (max-width: 760px) {
   .thumb {
     width: 33.3333%;
-    padding-bottom: 10px;
-  }
-  .thumb img {
-    display: block;
-    width: 97% !important;
-  }
-  .thumb:nth-child(3n-2) {
-    clear: both;
-  }
-  .thumb:nth-child(3n-1) img {
-    margin: 0 auto;
-  }
-  .thumb:nth-child(3n) img {
-    float: right;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .thumb {
     width: 50%;
-    padding-bottom: 10px;
   }
   .thumb img {
     width: 98%;
-  }
-  .thumb:nth-child(2n-1) img {
-    float: left;
-  }
-  .thumb:nth-child(2n) img {
-    float: right;
-  }
-}
-@media only screen and (min-width: 480px) {
-  .thumb img {
-    width: 225px;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .thumb img {
-    width: 145px;
   }
 }
