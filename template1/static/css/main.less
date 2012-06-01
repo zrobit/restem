@@ -6,26 +6,46 @@
 #header
 {
     height:45px;
+    width:100%;
+    overflow: hidden;
     background:yellow;
+}
+#logo
+{
+    width:120px;
 }
 #content
 {
-    .sidebar
-    {
-        width:200px;
-        height:500px;
-        float:left;
-        background:blue;
-    }
+    overflow: hidden;
     .main
     {
         width:740px;
-        height:500px;
         float: right;
         background:green;
     }
 }
+.sidebar
+{
+    width:200px;
+    height:500px;
+    float:left;
+    background:blue;
+}
+
+.thumb
+{
+    width:170px;
+    height:200px;
+    float: left;
+    margin:0 20px 20px 0;
+    background:silver;
+}
+.thumb:nth-child(4n)
+{
+    margin-right:0;
+}
 #footer
 {
     height:150px;
+    clear: both;
 }
