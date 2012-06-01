@@ -1591,10 +1591,15 @@ body {
   background: #fff;
   overflow: hidden;
   z-index: 999999;
+  box-shadow: 0 7px 30px -8px rgba(50, 50, 50, 0.35);
 }
 #header form {
-  padding: 10px 0 0 10px;
+  margin: 0 0 0 10px;
+  padding: 10px 0 0 0;
   float: left;
+}
+#header input {
+  width: 230px;
 }
 #header .btn {
   margin: 0;
@@ -1696,6 +1701,18 @@ body {
   }
 }
 @media only screen and (max-width: 480px) {
+  #header form {
+    float: right;
+  }
+  #header input {
+    width: 190px;
+  }
+  #logo {
+    width: 50px;
+  }
+  #header button span {
+    display: none;
+  }
   .thumb {
     width: 50%;
   }
@@ -1708,4 +1725,7 @@ body {
   .thumb:nth-child(2n) img {
     float: right;
   }
+}
+@media only screen and (max-width: 320px) {
+  
 }
