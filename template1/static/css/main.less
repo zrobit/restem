@@ -1,198 +1,147 @@
-body
-{
+@import "lib/twitter-bootstrap/less/reset.less";
+@import "lib/twitter-bootstrap/less/variables.less";
+@import "lib/twitter-bootstrap/less/mixins.less";
+@import "lib/twitter-bootstrap/less/forms.less";
+@import "lib/twitter-bootstrap/less/buttons.less";
+@import "lib/twitter-bootstrap/less/sprites.less";
+
+body{
     margin:0;
 }
-#container
-{
+#container, .inner-header{
+    min-width:300px;
     margin:0 auto;
 }
-#header
-{
+#header{
+    position: fixed;
+    left:0;
+    top:0;
     height:45px;
     width:100%;
+    background:#fff;
     overflow: hidden;
-    background:yellow;
+    z-index:999999;
+    form
+    {
+        padding:10px 0 0 10px;
+        float: left;
+    }
+    .btn
+    {
+        margin:0;
+    }
 }
-#logo
-{
+#logo{
     width:120px;
+    float: left;
 }
-#content
-{
+#content{
     overflow: hidden;
+    margin-top:50px;
 }
-.main-content
-{
+.main-content{
     background:green;
 }
-
-.sidebar
-{
+.sidebar{
     width:200px;
     height:500px;
     float:left;
     background:blue;
 }
-
-.thumbs
-{
+.thumbs{
     overflow: hidden;
 }
-
-.thumb
-{
+.thumb{
     padding-bottom:10px;
     float: left;
-    img
-    {
+    img{
         display: block;
         width:96%;
         margin:0 auto;          
     }
 }
-
-#footer
-{
+#footer{
     height:150px;
     clear: both;
 }
-
-@media only screen and (min-width : 1200px)
-{
-    #header
-    {
-        background:black !important;
-    }
-    #container
-    {
+@media only screen and (min-width : 1200px){
+    #container, .inner-header{
         width:1200px;
     }
-    .thumb
-    {
+    .thumb{
         width:20%;
     }
 }
-
-@media only screen and (min-width : 1024px) and (max-width: 1200px)
-{
-    #header
-    {
-        background:black !important;
-    }
-    #container
-    {
+@media only screen and (min-width : 1024px) and (max-width: 1200px){
+    #container, .inner-header{
         width:960px;
     }
-    .thumb
-    {
+    .thumb{
         width:25%;
     }
-
 }
-@media only screen and (max-width : 1024px)
-{
-    
-    .thumb
-    {
-    }
-    #container
-    {
+@media only screen and (max-width : 1024px){
+    #container, .inner-header{
         position: absolute;
         left:10px;
         right:10px;
     }
-    .main-content
-    {
+    .main-content{
         background:green;
         width:100%;
     }
-
 }
 
-
-@media only screen and (min-width : 760px)
-{
-    #header
-    {
-        background:red;
-    }
-    .sidebar
-    {
+@media only screen and (min-width : 760px){
+    .sidebar{
         position: relative;
         left:0;
         top:0;
     }
-    .main-content
-    {
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
-        box-sizing: border-box;
+    .main-content{
+        .box-sizing(border-box);
         padding-left: 220px;
     }
 }
-
-
-@media only screen and (max-width : 760px)
-{
-    .sidebar
-    {
+@media only screen and (max-width : 760px){
+    .sidebar{
         display: none;
     }
 }
-
-@media only screen and (min-width : 480px) and (max-width : 1023px)
-{
-    .thumb
-    {
+@media only screen and (min-width : 480px) and (max-width : 1023px){
+    .thumb{
         width:33.333333%;
         img
         {
             margin:0;
         }
     }
-    .thumb:nth-child(3n-1)
-    {
-        img
-        {
+    .thumb:nth-child(3n-1){
+        img{
             margin:0 auto;
         }
     }
-    .thumb:nth-child(3n)
-    {
-        img
-        {
+    .thumb:nth-child(3n){
+        img{
             float: right;
         }
     }   
 }
-
-
-
-
-//Resolution 320px and 480px
-@media only screen
-
-and (max-width : 480px)
-{
-    .thumb
-    {
+@media only screen and (max-width : 480px){
+    .thumb{
         width:50%;
-        img
-        {
+        img{
             margin:0;
         }
     }
-    .thumb:nth-child(2n-1)
-    {
+    .thumb:nth-child(2n-1){
         img
         {
             float: left;
         }
     }
-    .thumb:nth-child(2n)
-    {
-        img
-        {
+    .thumb:nth-child(2n){
+        img{
             float: right;
         }
     }
