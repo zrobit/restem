@@ -1,9 +1,9 @@
+TESTEADO solo en Chrome
+
 restem
 ======
 
 Plantillas responsive design
-
-TESTEADO solo en Chrome
 
 Template 1:
 plantilla con header,dos columnas y un footer
