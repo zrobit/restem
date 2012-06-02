@@ -1920,8 +1920,10 @@ a {
   background: #44ACCF;
 }
 #logo {
+  height: 50px;
   width: 120px;
   float: left;
+  background: url(../img/logo.png);
 }
 #content {
   overflow: hidden;
@@ -2016,6 +2018,7 @@ a {
   }
   #logo {
     width: 50px;
+    background: url(../img/logo.min.png);
   }
   #header button span {
     display: none;
